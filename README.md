@@ -1,5 +1,4 @@
-# Hostfully-QA-Engineer-Cypress
-Assignment
+
 # Hostfully-QA-Engineer-Cypress
 Assignment
 1. open vscode
