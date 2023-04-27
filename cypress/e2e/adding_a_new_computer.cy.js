@@ -5,6 +5,17 @@ describe('Adding a new computer', () => {
   cy.visit('https://computer-database.gatling.io/computers');
   cy.wait(2000)
   });
+  // Adding a Computer ACE has been created, ensuring that the computer is successfully created or not.
+  it('Adds a new computer with already exist name', () => {
+    cy.get('#add').click()
+    cy.get('#name').type('ACE')
+    cy.get('#introduced').type('2022-05-04')
+    cy.get('#discontinued').type('2023-05-06')
+    cy.get('#company').select('Thinking Machines')
+    cy.get('.actions > [type="submit"]').click()
+    cy.wait(10000)
+    cy.contains('Done ! Computer ACE has been created')
+  })
 // Adding a new computer with valid data, ensuring that the computer is successfully created.
   it('Adds a new computer with valid data', () => {
     cy.get('#add').click()
