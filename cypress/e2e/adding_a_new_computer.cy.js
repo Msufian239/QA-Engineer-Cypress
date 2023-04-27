@@ -21,7 +21,6 @@ describe('Adding a new computer', () => {
     cy.get('#add').click()
 
     cy.get('.actions > [type="submit"]').click()
-
     cy.contains('Computer name')
     cy.contains('Introduced date')
   })
